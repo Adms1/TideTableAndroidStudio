@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_transparent">#88FF0000</color>
+    <color name="textcolor">#003D71</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Tide Table India</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_splash">Splash</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        
+    </style>
+</resources>

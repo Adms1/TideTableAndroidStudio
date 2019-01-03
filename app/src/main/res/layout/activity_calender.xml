@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/calenderViewMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:onClick="onClick"
+            android:background="@android:drawable/ic_menu_revert" />
+
+        <TextView
+            android:id="@+id/textView_heading_premium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/ib_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:background="@android:drawable/ic_lock_power_off" />
+    </LinearLayout>
+
+    <ImageView 
+        android:id="@+id/iv_main_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calenderViewMain"
+        android:src="@drawable/diver_line"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_month_year"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-12dp"
+        android:layout_below="@+id/iv_main_divider"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/month"
+            android:layout_width="90dp"
+            android:visibility="gone"
+            android:layout_height="50dp" />
+        <Button 
+            android:id="@+id/btn_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:paddingBottom="8dp"
+            android:gravity="center"
+			android:onClick="onClick"
+			android:layout_centerVertical="true"
+        	android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:textSize="45sp"/>
+
+        <TextView
+            android:id="@+id/today_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+	
+        <Button 
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:background="@android:color/transparent"
+            android:textSize="45sp"
+            android:text="→"/>
+        
+        <Spinner
+            android:id="@+id/year"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_days"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_month_year"
+        android:layout_marginTop="-12dp"
+        android:background="@drawable/sun_mon_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/cal_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:text="Sun"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_mon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:text="Mon"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_tue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Tue"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_wed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Wed"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_thur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Thur"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_fri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Fri"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_sat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Sat"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_days" >
+
+        <GridView
+            android:id="@+id/cal_datelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#F0F1F3"
+            android:gravity="center_horizontal"
+            android:numColumns="7"
+            android:stretchMode="columnWidth" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_admob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+        <!--<com.google.android.gms.ads.AdView-->
+        <!--android:id="@+id/adView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--ads:adSize="BANNER"-->
+        <!--ads:adUnitId="ca-app-pub-2542422396039496/5993715966" />-->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_means"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:layout_below="@+id/relativeLayout1"
+        android:text="≈ Days with high tide" />
+    
+</RelativeLayout>

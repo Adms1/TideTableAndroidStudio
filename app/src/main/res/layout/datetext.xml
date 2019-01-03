@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dateTextNo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="2dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        android:paddingBottom="15dp"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/dateHighTide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+		android:layout_centerHorizontal="true"        
+        android:background="@drawable/tide"
+        android:visibility="gone" />
+
+</RelativeLayout>

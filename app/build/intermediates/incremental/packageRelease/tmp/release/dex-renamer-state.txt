@@ -1,0 +1,4 @@
+#Wed Jan 02 10:57:36 IST 2019
+base.0=E\:\\Vijay\\vijay\\TideTableAndroidStudio\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
